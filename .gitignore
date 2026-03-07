@@ -1,0 +1,3 @@
+# Dados persistidos do PostgreSQL
+data/*
+!data/.gitkeep

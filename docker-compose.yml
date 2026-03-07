@@ -1,0 +1,22 @@
+networks:
+  sigapp:
+    driver: bridge 
+
+services:
+  database:
+    build:
+      context: .docker
+      dockerfile: Dockerfile
+    image: sigapp-postgres
+    container_name: database
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: sigapp
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: "123456"
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    networks:
+      - sigapp

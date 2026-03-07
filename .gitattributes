@@ -1,0 +1,10 @@
+# Normaliza line endings para LF em todos os arquivos de texto
+* text=auto eol=lf
+
+# Scripts e SQL sempre com LF
+*.sh text eol=lf
+*.sql text eol=lf
+
+# Arquivos binários
+*.png binary
+*.jpg binary
